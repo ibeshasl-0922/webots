@@ -1058,7 +1058,7 @@ void WbSimulationView::restoreState(QList<QByteArray> state, bool firstLoad) {
 
 void WbSimulationView::restoreFactoryLayout() {
   const int halfSplitterWidth = mSplitter->width() * 0.5;
-  int preferredSceneTreeWidth = mSceneTree->sizeHint().width();
+  int preferredSceneTreeWidth = 0;
   if (preferredSceneTreeWidth > halfSplitterWidth)
     // default scene tree width should never be bigger than 3D view width
     preferredSceneTreeWidth = halfSplitterWidth;
