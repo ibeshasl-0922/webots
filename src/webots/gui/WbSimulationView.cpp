@@ -275,6 +275,11 @@ QToolBar *WbSimulationView::createToolBar() {
 
   updateSoundButtons();
 
+  action = manager->action(WbAction::DELTA_PROJECT_OPEN_DIALOG);
+  mToolBar->addAction(action);
+  mToolBar->widgetForAction(action)->setObjectName("menuButton");
+  connect(action, &QAction::triggered, this, &WbSimulationView::openDeltaProjectDialog);
+
   return mToolBar;
 }
 
@@ -502,6 +507,10 @@ void WbSimulationView::muteSound() {
 void WbSimulationView::updateSoundVolume(int volume) {
   WbSoundEngine::setVolume(volume);
   WbPreferences::instance()->setValue("Sound/volume", volume);
+}
+
+void WbSimulationView::openDeltaProjectDialog() {
+  WbMessageBox::info(tr("Hello World!"), this, tr("Delta Project"));
 }
 
 void WbSimulationView::hideInappropriateToolBarItems() {

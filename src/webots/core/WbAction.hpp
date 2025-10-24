@@ -144,6 +144,8 @@ namespace WbAction {
     SHOW_PROTO_RESULT,
     CONVERT_TO_BASE_NODES,
     CONVERT_ROOT_TO_BASE_NODES,
+    // Delta project
+    DELTA_PROJECT_OPEN_DIALOG,
     // keep track of numher of actions
     NACTIONS
   };

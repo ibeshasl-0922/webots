@@ -136,6 +136,7 @@ private slots:
   void unmuteSound();
   void muteSound();
   void updateSoundVolume(int volume);
+  void openDeltaProjectDialog();
   void hideInappropriateToolBarItems();
 
 private:

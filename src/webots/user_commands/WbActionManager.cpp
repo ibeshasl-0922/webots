@@ -1130,6 +1130,13 @@ void WbActionManager::populateActions() {
   newAction->setToolTip(newAction->statusTip());
   mActions[CONVERT_ROOT_TO_BASE_NODES] = newAction;
 
+  newAction = new QAction(this);
+  newAction->setText(tr("Delta Project"));
+  newAction->setStatusTip(tr("Open a dialog with \"Hello World\"."));
+  newAction->setToolTip(newAction->statusTip());
+  newAction->setIcon(QIcon("enabledIcons:delta-project.png"));
+  mActions[DELTA_PROJECT_OPEN_DIALOG] = newAction;
+
   assert(NACTIONS == mActions.size());
 }
 
